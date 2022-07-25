@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'criar-secao',
+    loadChildren: () => import('./Pages/criar-secao/criar-secao.module').then( m => m.CriarSecaoPageModule)
   }
 ];
 @NgModule({

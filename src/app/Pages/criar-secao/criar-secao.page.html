@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button color="danger" defaultHref="/tabs/editor"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Criar Seção</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<br>
+<ion-content color="light">
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <!-- adcionar atributos -->
+  <ion-item>
+    <ion-label position="floating">Atributos</ion-label>
+    <ion-input id="atr" value=""></ion-input>
+    <ion-button color="dark" size="large" slot="end" >
+      <ion-icon name="add-outline" slot="icon-only" (click)="handleClick()"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-textarea readonly="true">
+    <ion-list>
+      <ion-chip *ngFor="let item of items" color="warning"></ion-chip>
+    </ion-list>
+  </ion-textarea>
+</ion-content>
